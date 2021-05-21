@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 //motor de plantila
 app.set('view engine','ejs')
@@ -22,8 +26,4 @@ app.use((req,res)=>{
         titulo:'404',
         descripcion:"Titulo de la web"
     })
-})
-
-app.listen(port,()=>{
-    console.log('servidor a su servicio en el puerto',port)
 })
