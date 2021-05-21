@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
 
 
@@ -26,5 +26,5 @@ app.use((req,res)=>{
     })
 })
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+    console.log(`Our app is running on port ${ PORT }`)
+})
