@@ -3,9 +3,7 @@ const app = express()
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+
 
 //motor de plantila
 app.set('view engine','ejs')
@@ -27,3 +25,6 @@ app.use((req,res)=>{
         descripcion:"Titulo de la web"
     })
 })
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
