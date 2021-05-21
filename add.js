@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const puerto = 3000
+const port = process.env.PORT || 3000
 
 //motor de plantila
 app.set('view engine','ejs')
@@ -23,6 +23,6 @@ app.use((req,res)=>{
     })
 })
 
-app.listen(puerto,()=>{
-    console.log('servidor a su servicio en el puerto',puerto)
+app.listen(port,()=>{
+    console.log('servidor a su servicio en el puerto',port)
 })
